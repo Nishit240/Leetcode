@@ -22,7 +22,7 @@ class Solution(object):
         s = float('inf')
         p = 0
         for i in prices:
-            if i < s:
+            if s > i:
                 s = i
             elif i - s > p:
                 p = i - s
