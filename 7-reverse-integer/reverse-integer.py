@@ -11,17 +11,17 @@
 #         return res
 
 class Solution:
-    def reverse(self, x: int) -> int:
-        if x<=-(1<<31) or x>=(1<<31)-1:
-            return 0
-            
-        if x>0:
-            a=int(str(x)[::-1])
-            if  a>(1<<31)-1:
+    def reverse(self, x):
+        sign = -1 if x < 0 else 1
+        x = abs(x)
+
+        rev = 0
+        while x != 0:
+            rev = rev * 10 + x % 10
+            x //= 10
+
+            if rev < -2**31 or rev > 2**31 - 1:
                 return 0
-            return int(str(x)[::-1])
-        else:
-            a=-int(str(-x)[::-1])
-            if a<-(1<<31):
-                return 0
-            return -int(str(-x)[::-1])
+        return sign * rev
+
+        cl
