@@ -1,27 +1,27 @@
-# from math import sqrt
+from math import sqrt
 class Solution:
     def mySqrt(self, x: int) -> int:
-        # num = int(sqrt(x))
-        # return num
-        
-        if x < 2:
-            return x
+        num = int(sqrt(x))
+        return num
 
-        left, right = 1, x // 2
-        ans = 0
+        # if x < 2:
+        #     return x
 
-        while left <= right:
-            mid = (left + right) // 2
+        # left, right = 1, x // 2
+        # ans = 0
 
-            if mid * mid == x:
-                return mid
-            elif mid * mid < x:
-                ans = mid        # store possible answer
-                left = mid + 1   # try bigger
-            else:
-                right = mid - 1  # go smaller
+        # while left <= right:
+        #     mid = (left + right) // 2
 
-        return ans
+        #     if mid * mid == x:
+        #         return mid
+        #     elif mid * mid < x:
+        #         ans = mid        # store possible answer
+        #         left = mid + 1   # try bigger
+        #     else:
+        #         right = mid - 1  # go smaller
+
+        # return ans
         
 
         
