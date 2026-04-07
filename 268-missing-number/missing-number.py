@@ -6,7 +6,6 @@ class Solution(object):
         for i in range(0,n+1):
             if i not in nums:
                 return i
-        """
         n = len(nums)
         freq = {}
         for i in range(0,n+1):
@@ -16,6 +15,12 @@ class Solution(object):
         for k,v in freq.items():
             if v ==0:
                 return k
+        """
+
+        n = len(nums)
+        return ((n*(n+1))/2) - sum(nums)
+
+        
 
 
 
