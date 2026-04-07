@@ -12,9 +12,9 @@ class Solution(object):
         #     e = nums.pop()
         #     nums.insert(0,e)
 
-        n = len(nums)
-        k %= n 
-        nums[:] = nums[n-k:] + nums[ :n-k]
+        k = k % len(nums)
+        nums[:] = nums[-k: ] + nums[ :-k]
+        return nums
 
 
         
