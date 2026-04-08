@@ -4,13 +4,9 @@ class Solution(object):
         :type matrix: List[List[int]]
         :rtype: List[int]
         """
-        n = len(matrix)
-        m = len(matrix[0])
-        top = 0
-        bottom = n - 1
-        left = 0
-        right = m - 1
         result = []
+        top, left = 0, 0
+        bottom, right = len(matrix) - 1, len(matrix[0]) - 1
 
         while top <= bottom and left <= right:
 
