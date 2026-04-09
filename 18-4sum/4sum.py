@@ -1,10 +1,10 @@
 class Solution(object):
     def fourSum(self, nums, target):
-        """
-        :type nums: List[int]
-        :type target: int
-        :rtype: List[List[int]]
-        """
+        # """
+        # :type nums: List[int]
+        # :type target: int
+        # :rtype: List[List[int]]
+        # """
         ans = []
         if len(nums) < 4:
             return []
