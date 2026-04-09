@@ -6,7 +6,13 @@ class Solution(object):
         :rtype: List[List[int]]
         """
         ans = []
+        if len(nums) < 4:
+            return []
         nums.sort()
+        if nums[0] + nums[1] + nums[2] + nums[3] > target:
+            return []
+        if nums[-1] + nums[-2] + nums[-3] + nums[-4] < target:
+            return []
         for i in range(len(nums)):
             if i > 0 and nums[i] == nums[i - 1]:
                 continue 
