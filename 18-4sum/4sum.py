@@ -13,12 +13,20 @@ class Solution(object):
             return []
         if nums[-1] + nums[-2] + nums[-3] + nums[-4] < target:
             return []
-        for i in range(len(nums)):
-            if i > 0 and nums[i] == nums[i - 1]:
-                continue 
-            for j in range(i+1, len(nums)):
+        for i in range(len(nums) - 3):
+            if i and nums[i] == nums[i - 1]:
+                continue
+            if nums[i] + nums[i+1] + nums[i+2] + nums[i+3] > target:
+                break
+            if nums[i] + nums[-3] + nums[-2] + nums[-1] < target:
+                continue
+            for j in range(i + 1, len(nums) - 2):
                 if j > i + 1 and nums[j] == nums[j - 1]:
-                    continue 
+                    continue
+                if nums[i] + nums[j] + nums[j+1] + nums[j+2] > target:
+                    break
+                if nums[i] + nums[j] + nums[-2] + nums[-1] < target:
+                    continue
                 k = j + 1
                 l = len(nums) - 1
                 while k < l:
