@@ -16,7 +16,6 @@ class Solution(object):
                 max_l = max(max_l, r-l+1)
             r += 1
         return max_l
-        """
         left=0
         zero_count=0
         for right in range(len(nums)):
@@ -27,8 +26,24 @@ class Solution(object):
                     zero_count-=1
                 left+=1
         return len(nums)-left
-        
-            
+        """
+        l = 0
+        r = 0
+        max_l = 0
+        zeros = 0
+        while (r < len(nums)):
+            if nums[r] == 0:
+                zeros += 1
+            if (zeros > k ):
+                if nums[l] == 0:
+                    zeros -= 1
+                l += 1
+            if zeros <= k:
+                max_l = max(max_l, r-l+1)
+            r += 1
+        return max_l
+
+
 
 
                
