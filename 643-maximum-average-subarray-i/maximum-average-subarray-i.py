@@ -21,8 +21,7 @@ class Solution(object):
 
         for i in range(k, len(nums)):
             c_sum += nums[i] - nums[i - k]
-            if c_sum > max_sum:
-                max_sum = c_sum
+            max_sum = max (max_sum, c_sum)
         return float(max_sum) / k 
         
 
