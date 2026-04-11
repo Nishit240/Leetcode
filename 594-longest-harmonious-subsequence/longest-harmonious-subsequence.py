@@ -1,9 +1,5 @@
 class Solution(object):
     def findLHS(self, nums):
-        """
-        :type nums: List[int]
-        :rtype: int
-        """
         nums = Counter(nums)
         res = 0
         for i in nums:
