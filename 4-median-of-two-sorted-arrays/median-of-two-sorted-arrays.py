@@ -29,8 +29,8 @@ class Solution(object):
             return float(nums3[k // 2])
         else:
             return (nums3[k // 2 - 1] + nums3[k // 2]) / 2.0
-        '''
-
+        
+        
         mergedList = nums1 + nums2
         sortedList = sorted(mergedList)
         n = len(sortedList)
@@ -39,3 +39,14 @@ class Solution(object):
             return (sortedList[n//2 - 1] + sortedList[n//2]) / 2.0
         else:
             return sortedList[n//2]
+        '''
+        
+        nums = nums1 + nums2
+        nums.sort()
+        
+        n = len(nums)
+        
+        if n % 2 == 1:
+            return float(nums[n//2])
+        else:
+            return (nums[n//2 - 1] + nums[n//2]) / 2.0
