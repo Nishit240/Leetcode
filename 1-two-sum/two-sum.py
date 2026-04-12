@@ -7,7 +7,6 @@ class Solution(object):
                 if nums[i] + nums[j] == target:
                     return[i,j]
         """
-
         n = len(nums)
         hash_map = {}
 
