@@ -1,19 +1,16 @@
 class Solution(object):
     def removeDuplicates(self, nums):
         """
-        :type nums: List[int]
-        :rtype: int
+        n = len(nums)
+        freq_map= {}
+        for i in range(n):
+            freq_map[nums[i]] = i 
+        j = 0
+        for k in freq_map:
+            nums[j] = k
+            j+=1
+        return j     
         """
-        # n = len(nums)
-        # freq_map= {}
-        # for i in range(n):
-        #     freq_map[nums[i]] = i 
-        # j = 0
-        # for k in freq_map:
-        #     nums[j] = k
-        #     j+=1
-        # return j 
-
         if len(nums) == 1:
             return 1
         i = 0
