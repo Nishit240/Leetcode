@@ -1,11 +1,6 @@
 class Solution(object):
     def singleNumber(self, nums):
         """
-        result = 0
-        for num in nums:
-            result ^= num
-        return result
-        """
         freq = {}
 
         for num in nums:
@@ -14,3 +9,9 @@ class Solution(object):
         for num in freq:
             if freq[num] == 1:
                 return num
+        """
+
+        result = 0
+        for num in nums:
+            result ^= num
+        return result
