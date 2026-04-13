@@ -1,24 +1,25 @@
 class Solution(object):
     def searchInsert(self, nums, target):
-       n=len(nums)
-       for i in range(n):
-         if nums[i]==target:
-            return i
-         elif nums[i]>target:
-            return i
-       return n
-
-        # start = 0
-        # end = len(nums) - 1
-        # while start <= end:
-        #     mid = (start + end)//2
-        #     if nums[mid] == target:
-        #         return mid
-        #     elif nums[mid] < target:
-        #         start = mid +1
-        #     else:
-        #         end = mid -1
-        # return start 
+        '''
+        n=len(nums)
+        for i in range(n):
+            if nums[i]==target:
+                return i
+            elif nums[i]>target:
+                return i
+        return n
+        '''
+        start = 0
+        end = len(nums) - 1
+        while start <= end:
+            mid = (start + end)//2
+            if nums[mid] == target:
+                return mid
+            elif nums[mid] < target:
+                start = mid +1
+            else:
+                end = mid -1
+        return start 
 
         
 
