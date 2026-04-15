@@ -1,4 +1,3 @@
-# Write your MySQL query statement below
 SELECT c.name Customers
 FROM Customers c 
 left JOIN Orders o
