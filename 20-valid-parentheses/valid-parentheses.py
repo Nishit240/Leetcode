@@ -10,7 +10,11 @@ class Solution(object):
         return False
         """
         stack = []
-        mapping = {')': '(', '}': '{', ']': '['}
+        mapping = {
+            ')': '(', 
+            '}': '{', 
+            ']': '['
+            }
         for ch in s:
             if ch in mapping:
                 if not stack or stack[-1] != mapping[ch]:
@@ -18,9 +22,8 @@ class Solution(object):
                 stack.pop()
             else:
                 stack.append(ch)
-
         return len(stack) == 0
 
-        
+
 
         
