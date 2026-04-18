@@ -22,3 +22,5 @@ class Solution(object):
         return len(stack) == 0
 
         
+
+        
