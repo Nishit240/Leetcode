@@ -13,8 +13,6 @@ class Solution(object):
                 left += 1
             else:
                 right -= 1
-
-            # left+=1 if height[left] < height[right] else right-=1
         return max_area
         '''
         l, r = 0, len(height) - 1
@@ -27,7 +25,6 @@ class Solution(object):
                 l += 1
             else:
                 r -= 1
-
             if maxH * (r-l) < res:
                 break
         return res
