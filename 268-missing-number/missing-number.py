@@ -20,7 +20,8 @@ class Solution(object):
         """
 
         n = len(nums)
-        return ((n*(n+1))/2) - sum(nums)
+        result = ((n*(n+1))/2) - sum(nums)
+        return result
 
         
 
