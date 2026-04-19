@@ -19,7 +19,7 @@ class Solution(object):
                 total = 0
             total += n
             res = max(res, total)
-        
+    
         return res
 
 
