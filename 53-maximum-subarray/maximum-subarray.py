@@ -1,7 +1,9 @@
 class Solution(object):
     def maxSubArray(self, nums):
         '''
-        max_v = float('-inf')
+        # max_v = float('-inf')
+        max_v = -1000000
+        
         total = 0
         for i in nums:
             total += i
