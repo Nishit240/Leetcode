@@ -9,7 +9,7 @@ class Solution(object):
         """
         :type head: ListNode
         :rtype: ListNode
-        """
+        
         temp = head
         my_set = set()
         while temp is not None:
@@ -18,7 +18,25 @@ class Solution(object):
             my_set.add(temp)
             temp=temp.next
         return None
+        """
+        slow = head
+        fast = head
         
+        while fast and fast.next:
+            slow = slow.next
+            fast = fast.next.next
+            
+            if slow == fast:
+                slow = head
+                while slow != fast:
+                    slow = slow.next
+                    fast = fast.next
+                return fast
+
+        return None
+
+
+
 
          
         
