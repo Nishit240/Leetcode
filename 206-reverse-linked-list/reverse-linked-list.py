@@ -8,7 +8,7 @@ class Solution(object):
         """
         :type head: Optional[ListNode]
         :rtype: Optional[ListNode]
-        """
+        
         temp = head 
         stack = []
         while temp is not None:
@@ -20,5 +20,22 @@ class Solution(object):
             temp.val = e
             temp = temp.next
         return head
+        """
+        prev = None
+        curr = head  
+        
+        while curr:
+            node = curr.next   
+            curr.next = prev  
+            prev = curr        
+            curr = node    
+        
+        return prev 
+
+
+
+
+
+
 
         
