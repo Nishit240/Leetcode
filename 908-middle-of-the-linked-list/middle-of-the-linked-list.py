@@ -12,6 +12,7 @@ class Solution(object):
             temp = temp.next
         return temp
         """
+        
         slow = head 
         fast = head
         while fast != None and fast.next != None :
