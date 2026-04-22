@@ -34,6 +34,7 @@ class Solution(object):
         
         return head
         '''
+        
         if head is None or head.next is None:
             return head 
         
