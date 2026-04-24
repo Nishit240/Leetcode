@@ -1,9 +1,6 @@
 class Solution(object):
     def reverseList(self, head):
         """
-        :type head: Optional[ListNode]
-        :rtype: Optional[ListNode]
-        
         temp = head 
         stack = []
         while temp is not None:
