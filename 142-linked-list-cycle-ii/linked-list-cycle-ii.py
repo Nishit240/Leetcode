@@ -1,9 +1,6 @@
 class Solution(object):
     def detectCycle(self, head):
         """
-        :type head: ListNode
-        :rtype: ListNode
-        
         temp = head
         my_set = set()
         while temp is not None:
