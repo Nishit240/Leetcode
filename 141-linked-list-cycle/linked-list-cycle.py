@@ -1,12 +1,13 @@
 class Solution(object):
     def hasCycle(self, head):
+
         slow = head
         fast = head
         while fast and fast.next:
-            slow = slow.next          # move 1 step
-            fast = fast.next.next     # move 2 steps
+            slow = slow.next
+            fast = fast.next.next
             
             if slow == fast:
-                return True           # cycle detected
+                return True
         
-        return False                  # no cycle
+        return False
